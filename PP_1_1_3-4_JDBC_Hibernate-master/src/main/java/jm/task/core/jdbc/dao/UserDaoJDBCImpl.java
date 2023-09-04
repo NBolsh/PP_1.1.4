@@ -8,9 +8,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class UserDaoJDBCImpl implements UserDao {
-    private final static String CREATING = "CREATE TABLE Users (userId INT PRIMARY KEY AUTO_INCREMENT, userName VARCHAR(45), userLastName VARCHAR(45), userAge TINYINT(3))";
-    private final static String INSERT = "INSERT INTO Users (userName, userLastName, userAge) VALUES (?, ?, ?)";
-    private final static String DELETING = "DELETE FROM Users  WHERE userId = ?";
+    private final static String CREATING = "CREATE TABLE Users (id INT PRIMARY KEY AUTO_INCREMENT, name VARCHAR(45), lastname VARCHAR(45), age TINYINT(3))";
+    private final static String INSERT = "INSERT INTO Users (name, lastname, age) VALUES (?, ?, ?)";
+    private final static String DELETING = "DELETE FROM Users  WHERE id = ?";
     private final static String GET_ALL = "SELECT * FROM Users";
 
     public UserDaoJDBCImpl() {
@@ -58,9 +58,9 @@ public class UserDaoJDBCImpl implements UserDao {
         try(PreparedStatement preparedStatement = Util.getConnection().prepareStatement(GET_ALL)) {
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()){
-                User user = new User(resultSet.getString("userName"),
-                        resultSet.getString("userLastName"),
-                        resultSet.getByte("userAge"));
+                User user = new User(resultSet.getString("name"),
+                        resultSet.getString("lastname"),
+                        resultSet.getByte("age"));
                 userList.add(user);
             }
         } catch (SQLException e){
