@@ -5,7 +5,7 @@ target/
 
 ### IntelliJ IDEA ###
 .idea/modules.xml
-.idea/jarRepositories.xml
+PP_1_1_3-4_JDBC_Hibernate-master/.idea/jarRepositories.xml
 .idea/compiler.xml
 .idea/libraries/
 *.iws

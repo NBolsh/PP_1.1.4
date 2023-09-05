@@ -1,1 +1,0 @@
-Задача по Hibernate на ветке hibernateBranch.
