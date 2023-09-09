@@ -13,7 +13,7 @@ import org.hibernate.service.ServiceRegistry;
 import java.util.Properties;
 
 public class Util {
-    private final static String URL = "jdbc:mysql://localhost:3306/mydatabasekata";
+    private final static String URL = "jdbc:mysql://localhost:3306/mydatabasekata?useSSL=false";
     private final static String USERNAME = "root";
     private final static String PASSWORD = "root";
     private static Connection connection;
@@ -39,7 +39,7 @@ public class Util {
 
                 Properties settings = new Properties();
                 settings.put(Environment.DRIVER, "com.mysql.cj.jdbc.Driver");
-                settings.put(Environment.URL, "jdbc:mysql://localhost:3306/mydatabasekata?useSSL=false");
+                settings.put(Environment.URL, URL);
                 settings.put(Environment.USER, "root");
                 settings.put(Environment.PASS, "root");
                 settings.put(Environment.DIALECT, "org.hibernate.dialect.MySQL8Dialect");

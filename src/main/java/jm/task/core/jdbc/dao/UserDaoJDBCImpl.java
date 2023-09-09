@@ -20,6 +20,7 @@ public class UserDaoJDBCImpl implements UserDao {
         try (Statement statement = Util.getConnection().createStatement()) {
             statement.executeUpdate(CREATING);
         } catch (SQLException e) {
+            e.printStackTrace();
         }
     }
 @Override
@@ -28,6 +29,7 @@ public class UserDaoJDBCImpl implements UserDao {
             String sqlCommand = "DROP TABLE Users";
             statement.execute(sqlCommand);
         } catch (SQLException e) {
+            e.printStackTrace();
         }
 
     }

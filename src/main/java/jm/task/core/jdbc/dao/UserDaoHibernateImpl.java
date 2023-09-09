@@ -22,6 +22,7 @@ public class UserDaoHibernateImpl implements UserDao {
             session.createSQLQuery(CREATE).executeUpdate();
             session.getTransaction().commit();
         } catch (SessionException e){
+            e.printStackTrace();
         }
     }
 
@@ -32,6 +33,7 @@ public class UserDaoHibernateImpl implements UserDao {
             session.createSQLQuery(DROP).executeUpdate();
             session.getTransaction().commit();
         } catch (SessionException e){
+            e.printStackTrace();
         }
     }
 
@@ -55,6 +57,7 @@ public class UserDaoHibernateImpl implements UserDao {
             session.delete(userDB);
             session.getTransaction().commit();
         } catch (SessionException e){
+            e.printStackTrace();
         }
     }
 
@@ -66,6 +69,7 @@ public class UserDaoHibernateImpl implements UserDao {
             userList = session.createQuery("from User").list();
             session.getTransaction().commit();
         } catch (SessionException e){
+            e.printStackTrace();
         }
         return userList;
     }
