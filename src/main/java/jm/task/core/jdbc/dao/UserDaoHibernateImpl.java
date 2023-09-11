@@ -9,8 +9,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class UserDaoHibernateImpl implements UserDao {
-    private final static String CREATE = "CREATE TABLE IF NOT EXISTS User (id INT PRIMARY KEY AUTO_INCREMENT, name VARCHAR(45), lastname VARCHAR(45), age TINYINT(3))";
-    private final static String DROP = "DROP TABLE IF EXISTS User";
+    private static final String CREATE = "CREATE TABLE IF NOT EXISTS User (id INT PRIMARY KEY AUTO_INCREMENT, name VARCHAR(45), lastname VARCHAR(45), age TINYINT(3))";
+    private static final String DROP = "DROP TABLE IF EXISTS User";
     public UserDaoHibernateImpl() {
     }
 

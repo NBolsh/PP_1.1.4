@@ -8,10 +8,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class UserDaoJDBCImpl implements UserDao {
-    private final static String CREATING = "CREATE TABLE Users (id INT PRIMARY KEY AUTO_INCREMENT, name VARCHAR(45), lastname VARCHAR(45), age TINYINT(3))";
-    private final static String INSERT = "INSERT INTO Users (name, lastname, age) VALUES (?, ?, ?)";
-    private final static String DELETING = "DELETE FROM Users  WHERE id = ?";
-    private final static String GET_ALL = "SELECT * FROM Users";
+    private static final String CREATING = "CREATE TABLE Users (id INT PRIMARY KEY AUTO_INCREMENT, name VARCHAR(45), lastname VARCHAR(45), age TINYINT(3))";
+    private static final String INSERT = "INSERT INTO Users (name, lastname, age) VALUES (?, ?, ?)";
+    private static final String DELETING = "DELETE FROM Users  WHERE id = ?";
+    private static final String GET_ALL = "SELECT * FROM Users";
 
     public UserDaoJDBCImpl() {
     }
